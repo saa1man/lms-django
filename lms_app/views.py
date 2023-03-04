@@ -22,3 +22,9 @@ def books(request):
         'books': Book.objects.all(),
     }
     return render(request, 'pages/books.html', context=context)
+
+def delete(request):
+    return render(request, 'pages/delete.html')
+
+def update(request):
+    return render(request, 'pages/update.html')
