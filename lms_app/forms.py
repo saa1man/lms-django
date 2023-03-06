@@ -1,5 +1,14 @@
 from django import forms
-from .models import *
+from .models import Book, Category
+
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ['name']
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
 
 class BookForm(forms.ModelForm):
     class Meta:
@@ -29,6 +38,3 @@ class BookForm(forms.ModelForm):
             'status': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(attrs={'class': 'form-control'}),
         }
-
-
-
