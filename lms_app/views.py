@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import *
 
@@ -49,5 +49,10 @@ def update(request, id):
     return render(request, 'pages/update.html', context=context)
 
 
-def delete(request):
+def delete(request, id):
+    book_delete = get_object_or_404(Book, id=id)
+    if request.method == 'POST':
+        book_delete.delete()
+        return redirect('/')
+        
     return render(request, 'pages/delete.html')
