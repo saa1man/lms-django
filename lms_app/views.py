@@ -23,6 +23,7 @@ def index(request):
     }
     return render(request, 'pages/index.html', context=context)
 
+
 def books(request):
     context = {
         'category': Category.objects.all(),
@@ -30,6 +31,7 @@ def books(request):
         
     }
     return render(request, 'pages/books.html', context=context)
+
 
 def update(request, id):
     book_id = Book.objects.get(id=id)
