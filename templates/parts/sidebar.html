@@ -2,7 +2,7 @@
   <aside style="position: fixed;" class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{% url 'index' %}" class="brand-link">
-      <span class="brand-text font-weight-light">Library</span>
+      <span class="brand-text font-weight-light">المكتبة الالكترونية</span>
     </a>
 
     <!-- Sidebar -->
@@ -24,7 +24,7 @@
             <a href="{% url 'books' %}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                New Books
+                الكتب
               </p>
             </a>
           </li>
@@ -32,7 +32,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Category
+                التصنيفات
                 <i class="fas fa-angle-left right"></i>
                 
               </p>
@@ -42,7 +42,7 @@
                   <li class="nav-item">
                     <a id="addcat" href="#" class="nav-link">
                         <i class="fa fa-plus "></i>
-                        <p  class="text-light"> Add New </p>
+                        <p  class="text-light">اضافة</p>
                     </a>
                   </li> 
               <form id="cat" method="POST">
@@ -50,8 +50,8 @@
                 <div id='catinput'>
                   {{formcat}}
 
-                  <button type="submit" class="btn btn-success">save</button>
-                  <button id="backcat" class="btn btn-primary ">back</button>
+                  <button type="submit" class="btn btn-success">حفظ</button>
+                  <button id="backcat" class="btn btn-primary ">رجوع</button>
                 </div>
               </form>  
                   {% for cat in category %}
@@ -70,13 +70,13 @@
           <li style="cursor: pointer;" class="nav-item statussold">
             <a id="statusSold" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">تم بيعه</p>
+              <p class="text">مباع</p>
             </a>
           </li>
           <li style="cursor: pointer;" class="nav-item statusrental">
             <a id="" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
-              <p>تم استعارته</p>
+              <p>معار</p>
             </a>
           </li>
           <li style="cursor: pointer;" class="nav-item statusavailable">

@@ -54,7 +54,7 @@ $(document).ready(function(){
   $(".totalprice").each(function(){
     $(this).hide()
     var salary = $(this).text()
-    total += parseInt(salary)
+    total += parseFloat(salary)
   });
   $("#totalsalarys").text($("#totalsalarys").text()+total)
 });
@@ -63,7 +63,7 @@ var total1 = 0;
 $(".totalrental").each(function(){
   $(this).hide()
   var salary1 = $(this).text()
-  total1 += parseInt(salary1)
+  total1 += parseFloat(salary1)
 });
 $(".salaryrental").text(total1)
 $(".salaryrental").hide()
@@ -72,7 +72,7 @@ var total2 = 0;
 $(".totalsold").each(function(){
   $(this).hide()
   var salary2 = $(this).text()
-  total2 += parseInt(salary2)
+  total2 += parseFloat(salary2)
 });
 $(".salarysold").text(total2)
 $(".salarysold").hide()
@@ -105,6 +105,10 @@ $(".status{{book.status}}").click(function(){
 
 {% endfor %}
 
+</script>
+
+<script>
+document.getElementById("year").innerHTML = new Date().getFullYear();  // returns the current year
 </script>
 
 <script>
