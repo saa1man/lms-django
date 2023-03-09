@@ -53,6 +53,26 @@
                 {% endif %}
               {% endif %}
             {% endfor %}
+            
+            <!--الكتب المستعارة-->
+            {% for book in books %}
+              {% if book.status == 'rental' %}
+                {% if book.total_rental != None %}
+                  <p class="totalrental">{{book.total_rental}}</p>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            <p class="salaryrental"></p>
+            <!--الكتب المباعة-->
+            {% for book in books %}
+              {% if book.status == 'sold' %}
+                {% if book.price != None %}
+                  <p class="totalsold">{{book.price}}</p>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            <p class="salarysold"></p>
+
             <div class="col-lg-6">
               <div class="card">
                 <div class="card-header border-0">
